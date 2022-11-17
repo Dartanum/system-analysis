@@ -3,7 +3,7 @@ import json
 import numpy as np
 
 
-def task5(arg1: str, arg2: str) -> str:
+def task(arg1: str, arg2: str) -> str:
     conflicts = []
     ranking1 = json.loads(arg1)
     ranking2 = json.loads(arg2)
@@ -49,7 +49,7 @@ def get_ranking_len(ranking) -> int:
 
 
 def main():
-    print(task5('["1", ["2","3"],"4", ["5","6","7"],"8","9","10"]', '[["1","2"],["3","4","5"],"6","7","9",["8","10"]]'))
+    print(task('["1", ["2","3"],"4", ["5","6","7"],"8","9","10"]', '[["1","2"],["3","4","5"],"6","7","9",["8","10"]]'))
 
 
 if __name__ == "__main__":
