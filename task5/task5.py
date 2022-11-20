@@ -20,6 +20,7 @@ def task(arg1: str, arg2: str) -> str:
             if int(Yab[i, j]) == 0 and int(Yab_transposed[i, j]) == 0:
                 if (str(j + 1), str(i + 1)) not in conflicts:
                     conflicts.append((str(i + 1), str(j + 1)))
+    conflicts = [list(t) for t in conflicts]
 
     return json.dumps(conflicts)
 
