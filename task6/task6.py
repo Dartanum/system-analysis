@@ -2,7 +2,7 @@ import json
 import numpy as np
 
 
-def create_comparision_mat(column):
+def create_comparison_mat(column):
     c = len(column)
     res = np.zeros((c, c))
 
@@ -17,7 +17,7 @@ def task(input_mat: str):
     comparisons = []
 
     for col in range(mat.shape[1]):
-        comparisons.append(create_comparision_mat(mat[:, col]).T)
+        comparisons.append(create_comparison_mat(mat[:, col]).T)
 
     X = np.mean(comparisons, axis=0)
     kt = [1 / mat.shape[0] for _ in range(mat.shape[1])]
