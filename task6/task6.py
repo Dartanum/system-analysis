@@ -34,8 +34,10 @@ def task(input_mat: str):
 
     return json.dumps([round(res, 3) for res in kt_1])
 
+
 def main():
     print(task("[[1,3,2],[2,2,2],[1.5,3,1.5]]"))
+
 
 if __name__ == "__main__":
     main()
